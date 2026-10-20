@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+body{
+  padding: 25px;
+  font-family: "Luckiest Guy";
+}
+.title {
+	color: #222;
+}
+
+.calculator-module {
+  box-sizing: border-box;
+  background-color: #555;
+  width: 500px;
+  height: 330px;
+  border-radius: 50px;
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+}
+
+.keypad {
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 15px;
+  padding: 20px 10px 20px 25px;
+}
+
+.calculator-module button {
+  border-radius: 35%;
+  font-family: inherit;
+  font-size: 40px;
+  border: 4px solid gray;
+  outline: 6px solid black;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding-top: 10px;
+    cursor: pointer;
+}
+
+.calculator-module button.last {
+  border-radius: 24px;
+  font-family: inherit;
+  font-size: 40px;
+  grid-column: 2;
+}
+
+.screen-area {
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  padding: 5px 25px 25px 10px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  gap: 9px;
+}
+
+.display {
+  box-sizing: border-box;
+  background-color: #0f0;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 10%;
+  font-size: 400%;
+  border-width: 20px;
+  padding-top: 25px;
+  border: 4px solid black;
+  outline: 6px solid gray;
+}
+
+.expression {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.answer-row {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.light {
+  background-color: #ddd;
+  width: 12%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 6px solid black;
+}
+
+.light.is-lit {
+  background-color: #f00;
+}
+
+.phases {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.phase {
+  background-color: white;
+  width: 15px;
+  aspect-ratio: 1/1;
+  margin: 0 0 0 -25px;
+  border: 5px solid black;
+}
+
+.phase.done {
+  background-color: #0f0;
+}
