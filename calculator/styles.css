@@ -8,6 +8,10 @@ body{
 	color: #222;
 }
 
+h1 {
+  margin: 0 auto;
+}
+
 .calculator-module {
   box-sizing: border-box;
   background-color: #555;
