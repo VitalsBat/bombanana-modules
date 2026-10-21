@@ -1,0 +1,32 @@
+.lever {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #222;
+  border-radius: 15px;
+  border: 5px solid #333;
+  cursor: pointer;
+  margin: 15px auto
+}
+
+.lever-handle {
+  position: absolute;
+  width: 50px;
+  height: 15px;
+  background: #ddd;
+  border: 3px solid #000;
+  border-radius: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: top 0.2s ease;
+}
+
+/* Down position (default) */
+.lever[data-state="down"] .lever-handle {
+  top: 30px;
+}
+
+/* Up position */
+.lever[data-state="up"] .lever-handle {
+  top: 0px;
+}
