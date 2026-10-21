@@ -43,5 +43,5 @@ function equalArray(arr1, arr2) {
   if (arr1.length != arr2.length) {
     return false
   }
-  return arr1.every((elt, idx) => {elt === arr2[idx]})
+  return arr1.every((elt, idx) => (elt === arr2[idx]))
 }
