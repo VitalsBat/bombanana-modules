@@ -37,3 +37,11 @@ document.querySelectorAll('.braille').forEach(el => {
     el.innerHTML = '<span></span><span></span><span></span><span></span>';
   }
 });
+
+// Supporting Functions
+function equalArray(arr1, arr2) {
+  if (arr1.length != arr2.length) {
+    return false
+  }
+  return arr1.every((elt, idx) => {elt === arr2[idx]})
+}
