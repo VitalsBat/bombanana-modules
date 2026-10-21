@@ -54,6 +54,10 @@ body{
   border: 5px solid black;
 }
 
+.phase.done {
+  background-color: #0f0;
+}
+
 /* braille numbers */
 .braille {
   display: grid;
