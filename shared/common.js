@@ -1,3 +1,4 @@
+// Mistake Counter
 const cross = document.querySelector(".cross")
 let mistake = 0
 
@@ -9,7 +10,19 @@ function addCross() {
   }
 }
 
-document.querySelectorAll(".braille").forEach(el => {
+// Phase Counter
+const phases = document.querySelectorAll(".phase")
+let curPhase = 0
+
+function complete() {
+  curPhase = curPhase + 1
+  if (curPhase > 0) {
+    phases[phases.length - curPhase].classList.add("done")
+  }
+}
+
+// Format Braille
+document.querySelectorAll('.braille').forEach(el => {
   if (el.children.length == 0) {
     el.innerHTML = '<span></span><span></span><span></span><span></span>';
   }
