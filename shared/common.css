@@ -20,7 +20,7 @@ body{
   display: flex;
 }
 
-.content-horizontal {
+.horizontal-container {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -28,7 +28,7 @@ body{
   align-items: center;
 }
 
-.content-vertical {
+.vertical-container {
   box-sizing: border-box;
   width: 50%;
   display: flex;
