@@ -1,1 +1,50 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <title>Direction Module</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="..//shared/common.css">
+    <script src="..//shared/common.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1 class="title">Direction Module</h1>
+    <div class="horizontal-container" style="color: #00f">
+      <div class="vertical-container" style="padding: 12px">
+        <div class="cross">
+          <span>X</span>
+          <span>X</span>
+          <span>X</span>
+        </div>
+        <br>
+        <div class="module">
+          <div class="phases">
+            <div class="phase"></div>
+            <div class="phase"></div>
+            <div class="phase"></div>
+            <div class="phase"></div>
+          </div>
+        <div class="vertical-container" style="width: 100%">
+          <div style="position: absolute; top:0; right:0; margin: 30px 40px">
+            <div class="light yellow" style="width: 20px"></div>
+          </div>
+          <button class="direction up" data-dir="up"></button>
+          <div class="horizontal-container">
+          <button class="direction left" data-dir="left"></button>
+          <div class="braille-panel">
+            <div class="braille" data-number="2"></div>
+          </div>
+          <button class="direction right" data-dir="right"></button>
+          </div>
+          <button class="direction down" data-dir="down"></button>
+        </div>
+        </div>
+      </div>
+
+      <div class="vertical-container">
+        <img src="Direction-Module IMG.png"
+          style="display: block; margin: 0 auto">
+      </div>
+    </div>
+  </body>
+</html>
