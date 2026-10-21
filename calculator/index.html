@@ -3,40 +3,76 @@
   <head>
     <title>Calculator Module</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="shared/common.css">
+    <script src="shared/common.js" defer></script>
     <script src="script.js" defer></script>
   </head>
   <body>
-      <h1 class="title">Calculator Module</h1>
-      <div class="calculator-module">
-        <div class="phases">
-          <div class="phase"></div>
-          <div class="phase"></div>
+    <h1 class="title">Calculator Module</h1>
+    <div class="horizontal-container">
+      <div class="vertical-container" style="padding: 12px">
+        <div class="cross">
+          <span>X</span>
+          <span>X</span>
+          <span>X</span>
         </div>
-        <div class="keypad">
-          <button type="button" data-number="7">7</button>
-          <button type="button" data-number="8">8</button>
-          <button type="button" data-number="9">9</button>
-          <button type="button" data-number="4">4</button>
-          <button type="button" data-number="5">5</button>
-          <button type="button" data-number="6">6</button>
-          <button type="button" data-number="1">1</button>
-          <button type="button" data-number="2">2</button>
-          <button type="button" data-number="3">3</button>
-          <button type="button" data-number="0" class="last">0</button>
-        </div>
-        <div class="screen-area">
-          <div class="display">
-            <div class="expression">
-              54+32
-            </div>
-            <div class="answer-row">
-              <span>=</span>
-              <span class="answer"></span>
-            </div>
+        <br>
+        <div class="module">
+          <div class="phases">
+            <div class="phase"></div>
+            <div class="phase"></div>
           </div>
-          <div class="light">
+          <div class="keypad">
+            <button type="button" data-output="3">
+              <div class="braille" data-number="3"></div>
+            </button>
+            <button type="button" data-output="8">
+              <div class="braille" data-number="8"></div>
+            </button>
+            <button type="button" data-output="6">
+              <div class="braille" data-number="6"></div>
+            </button>
+            <button type="button" data-output="4">
+              <div class="braille" data-number="4"></div>
+            </button>
+            <button type="button" data-output="1">
+              <div class="braille" data-number="1"></div>
+            </button>
+            <button type="button" data-output="9">
+              <div class="braille" data-number="9"></div>
+            </button>
+            <button type="button" data-output="2">
+              <div class="braille" data-number="2"></div>
+            </button>
+            <button type="button" data-output="5">
+              <div class="braille" data-number="5"></div>
+            </button>
+            <button type="button" data-output="0">
+              <div class="braille" data-number="0"></div>
+            </button>
+            <button type="button" data-output="7" class="last">
+              <div class="braille" data-number="7"></div>
+            </button>
+          </div>
+          <div class="vertical-container" style="width: 50%">
+            <div class="screen" style="font-size: 400%">
+              <div class="vertical-container">
+                <div class="horizontal-container">51-12</div>
+                <div class="horizontal-container">=<!--
+                  --><div class="answer"></div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="light" style="width: 12%"></div>
           </div>
         </div>
       </div>
+
+      <div class="vertical-container">
+        <img src="calculator/Calculator-Module IMG.png"
+          style="display: block; margin: 0 auto">
+      </div>
+    </div>
   </body>
 </html>
