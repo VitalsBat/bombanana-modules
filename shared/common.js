@@ -21,6 +21,16 @@ function complete() {
   }
 }
 
+function restart(p = 0) {
+  if (p < 0) {
+    return
+  }
+  while (curPhase > p) {
+    phases[phases.length - curPhase].classList.remove("done");
+    curPhase = curPhase - 1
+  }
+}
+
 // Format Braille
 document.querySelectorAll('.braille').forEach(el => {
   if (el.children.length == 0) {
