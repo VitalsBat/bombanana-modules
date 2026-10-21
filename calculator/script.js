@@ -12,6 +12,7 @@ buttons.forEach((button) => {
     if (answer.textContent.length >= 2) {
       if (answer.textContent === ans1) {
         complete()
+        light.classList.add("yellow")
       } else {
         addCross()
         answer.textContent = ""
