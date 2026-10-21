@@ -1,0 +1,105 @@
+.module {
+  position: relative;
+}
+
+.horizontal-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.vertical-container {
+  box-sizing: border-box;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.braille-panel {
+  background-color: #ddd;
+  height: 90px;
+  width: 260px;
+  border-radius: 20px;
+  margin: 10px;
+  border: 3px solid #aaa;
+  outline: 5px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.direction {
+  position: relative;
+  display: block;
+  padding: 0;
+  border: 0;
+  background: #888;
+  cursor: pointer;
+  appearance: none;
+}
+
+.direction::before,
+.direction::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+}
+
+.direction::before {
+  inset: 3px;
+  background: #000;
+}
+
+.direction::after {
+  inset: 7px;
+  background: red;
+}
+
+.up {
+  width: 100px;
+  height: 80px;
+}
+
+.up,
+.up::before,
+.up::after {
+  clip-path: polygon(47% 8%, 48% 4%, 50% 3%, 52% 4%, 53% 8%, 97% 92%, 98% 95%, 97% 98%, 94% 98%, 6% 98%, 3% 98%, 2% 95%, 3% 92%);
+}
+
+.right {
+  width: 80px;
+  height: 100px;
+}
+
+.right,
+.right::before,
+.right::after {
+  clip-path: polygon(92% 47%, 96% 48%, 97% 50%, 96% 52%, 92% 53%, 8% 97%, 5% 98%, 2% 97%, 2% 94%, 2% 6%, 2% 3%, 5% 2%, 8% 3%);
+}
+
+.down {
+  width: 100px;
+  height: 80px;
+}
+
+.down,
+.down::before,
+.down::after {
+  clip-path: polygon(3% 8%, 6% 2%, 94% 2%, 97% 2%, 98% 5%, 97% 8%, 53% 92%, 52% 96%, 50% 97%, 48% 96%, 47% 92%);
+}
+
+.left {
+  width: 80px;
+  height: 100px;
+}
+
+.left,
+.left::before,
+.left::after {
+  clip-path: polygon(8% 53%, 4% 52%, 3% 50%, 4% 48%, 8% 47%, 92% 3%, 95% 2%, 98% 3%, 98% 6%, 98% 94%, 98% 97%, 95% 98%, 92% 97%);
+}
