@@ -1,0 +1,43 @@
+.upbutton {
+  position: relative;
+  display: block;
+  padding: 0;
+  border: 0;
+  background: #888;
+  cursor: pointer;
+  appearance: none;
+  width: 100px;
+  height: 80px;
+  clip-path: polygon(47% 8%, 48% 4%, 50% 3%, 52% 4%, 53% 8%, 97% 92%, 98% 95%, 97% 98%, 94% 98%, 6% 98%, 3% 98%, 2% 95%, 3% 92%);
+}
+
+.upbutton::before,
+.upbutton::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+  clip-path: polygon(47% 8%, 48% 4%, 50% 3%, 52% 4%, 53% 8%, 97% 92%, 98% 95%, 97% 98%, 94% 98%, 6% 98%, 3% 98%, 2% 95%, 3% 92%);
+}
+
+.upbutton::before {
+  inset: 3px;
+  background: #000;
+}
+
+.upbutton::after {
+  inset: 7px;
+  background: red;
+}
+
+.screen {
+  background-color: #999;
+}
+
+.screen.blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% {background-color: #0f0;}
+  50% {background-color: #999;}
+}
