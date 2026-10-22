@@ -2,17 +2,26 @@ const buttons = document.querySelectorAll("button.upbutton")
 const screens = document.querySelectorAll(".screen")
 const enter = document.querySelector(".enter")
 const morseFiles =[
-  "morse1.wav",
-  "morse3.wav",
-  "morse5.wav",
-  "morse7.wav",
+  "https://vitalsbat.github.io/bombanana-modules/morse/morse1.wav",
+  "https://vitalsbat.github.io/bombanana-modules/morse/morse3.wav",
+  "https://vitalsbat.github.io/bombanana-modules/morse/morse5.wav",
+  "https://vitalsbat.github.io/bombanana-modules/morse/morse7.wav",
 ]
 let current = 0
 let isRunning = true
 let curAudio = null
+let hasInteracted = false
 
 let curNumbers = [0, 0, 0, 0]
 const ans = [5, 9, 8, 1]
+
+document.addEventListener("click", () => {
+  hasInteracted = true
+  if (curAudio) {
+    curAudio.muted = false
+    curAudio.play().catch(() => {})
+  }
+}, { once: true })
 
 function playNext() {
   if (!isRunning) return
@@ -23,7 +32,8 @@ function playNext() {
   screen.classList.add("blink")
 
   curAudio = new Audio(morseFiles[current])
-  curAudio.play()
+  curAudio.muted = !hasInteracted
+  curAudio.play().catch(() => {})
 
   curAudio.addEventListener("ended", () => {
     screen.classList.remove("blink")
