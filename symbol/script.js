@@ -56,7 +56,6 @@ buttons.forEach((button, index) => {
     if (curPhase < 4 && mistake < 3) {
       if (rotnum === sympos[curIter][curPhase] && button.dataset.color === ans[curIter][curPhase]) {
         complete()
-        randomColor()
       } else {
         dial.style.transition = "none";
         rotation = 0;
@@ -68,6 +67,7 @@ buttons.forEach((button, index) => {
         restart()
         curIter += 1
       }
+      randomColor()
     }
   })
 })
