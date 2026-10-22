@@ -42,7 +42,7 @@ document.querySelectorAll('.braille').forEach(el => {
 document.querySelectorAll('.symbol').forEach(img => {
   const name = img.dataset.name;
   if (name) {
-    img.src = `https://vitalsbat.github.io/bombanana-modules/symbollist/${name}.png`;   // adjust path if needed
+    img.src = `https://vitalsbat.github.io/bombanana-modules/symbollist/${name}.png`;
     img.alt = name;
   }
 });
