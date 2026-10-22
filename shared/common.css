@@ -167,6 +167,7 @@ button.enter {
   justify-content: center;
   align-items: center;
   padding: 10px 0 0 0;
+  cursor: pointer;
 }
 
 button.enter::after {
@@ -184,6 +185,7 @@ button.v-enter {
   justify-content: center;
   align-items: center;
   padding: 10px 0 0 0;
+  cursor: pointer;
 }
 
 button.v-enter::after {
