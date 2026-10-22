@@ -38,6 +38,15 @@ document.querySelectorAll('.braille').forEach(el => {
   }
 });
 
+// Format Symbols
+document.querySelectorAll('.symbol').forEach(img => {
+  const name = img.dataset.name;
+  if (name) {
+    img.src = `https://vitalsbat.github.io/bombanana-modules/symbollist/${name}.png`;   // adjust path if needed
+    img.alt = name;
+  }
+});
+
 // Supporting Functions
 function equalArray(arr1, arr2) {
   if (arr1.length != arr2.length) {
