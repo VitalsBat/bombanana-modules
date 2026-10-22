@@ -58,6 +58,12 @@ buttons.forEach((button, index) => {
         complete()
         randomColor()
       } else {
+        dial.style.transition = "none";
+        rotation = 0;
+        rotnum = 0;
+        dial.style.transform = "rotate(0deg)";
+        dial.offsetHeight;
+        dial.style.transition = "";
         addCross()
         restart()
         curIter += 1
