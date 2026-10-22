@@ -1,0 +1,112 @@
+.invisgrid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 100%;
+  aspect-ratio: 1/1;
+}
+
+.invisgrid .circle-panel {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: #121212;
+}
+
+.dial {
+  position: relative;
+  height: 90%;
+  width: 90%;
+  justify-self: center;
+  align-self: center;
+  appearance: none;
+  background-color: #f00;
+  border-color: transparent;
+  z-index: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: transform 180ms ease;
+}
+
+.dial::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 16px solid #f00;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.dial .arrow {
+  position: absolute;
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  justify-self: center;
+  align-self: center;
+}
+
+.invisgrid .dial {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.invisgrid .symbol {
+  justify-self: center;
+  align-self: center;
+  z-index: 1;
+  width: 80%;
+  height: 80%;
+}
+
+.invisgrid .symbol[data-name="CircleSquare"] {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.invisgrid .symbol[data-name="UpTriangle"] {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.invisgrid .symbol[data-name="SquareCircle"] {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.invisgrid .symbol[data-name="Stop"] {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+button.ansbutton {
+  width: 100%;
+  height: 30%;
+  border-radius: 15px;
+  border: 10px solid black;
+  cursor: pointer;
+}
+
+button.ansbutton[data-color="red"] {
+  background-color: red;
+}
+
+button.ansbutton[data-color="yellow"] {
+  background-color: yellow;
+}
+
+button.ansbutton[data-color="green"] {
+  background-color: #0f0;
+}
