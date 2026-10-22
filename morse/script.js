@@ -2,10 +2,10 @@ const buttons = document.querySelectorAll("button.upbutton")
 const screens = document.querySelectorAll(".screen")
 const enter = document.querySelector(".enter")
 const morseFiles =[
-  "https://vitalsbat.github.io/bombanana-modules/morse/morse1.wav",
-  "https://vitalsbat.github.io/bombanana-modules/morse/morse3.wav",
-  "https://vitalsbat.github.io/bombanana-modules/morse/morse5.wav",
-  "https://vitalsbat.github.io/bombanana-modules/morse/morse7.wav",
+  "morse1.wav",
+  "morse3.wav",
+  "morse5.wav",
+  "morse7.wav",
 ]
 let current = 0
 let isRunning = true
