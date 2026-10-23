@@ -1,0 +1,72 @@
+.maze-panel {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 2px;
+  background-color: #121212;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.maze-panel .light {
+  width: 40px;
+}
+
+.braille-panel {
+  width: 40%;
+  aspect-ratio: 1/1;
+  background-color: #aaa;
+  padding: 5px;
+  border: 5px solid black;
+  border-radius: 15px
+}
+
+.direction-pad {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #7f0000;
+}
+
+.direction-button {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: #e32626;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.direction-button:hover {
+  background: #ff3b3b;
+}
+
+.direction-button.up {
+  clip-path: polygon(0 0, 100% 0, 50% 46%);
+  align-items: flex-start;
+  padding-top: 12px;
+}
+
+.direction-button.right {
+  clip-path: polygon(100% 0, 100% 100%, 54% 50%);
+  justify-content: flex-end;
+  padding-right: 12px;
+}
+
+.direction-button.down {
+  clip-path: polygon(100% 100%, 0 100%, 50% 54%);
+  align-items: flex-end;
+  padding-bottom: 12px;
+}
+
+.direction-button.left {
+  clip-path: polygon(0 100%, 0 0, 46% 50%);
+  justify-content: flex-start;
+  padding-left: 12px;
+}
