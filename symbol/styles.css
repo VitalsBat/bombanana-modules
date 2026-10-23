@@ -54,8 +54,9 @@
   border-right: 5px solid white;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  justify-self: center;
-  align-self: center;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
 }
 
 .invisgrid .dial {
